@@ -1,8 +1,6 @@
 # TsTest
 
-Simple frontend TypeScript testing utility
-
-I intend to rewrite or at least wrap the python in node.js to simplify installation.
+Simple frontend TypeScript testing utility.
 
 ## Installation
 
