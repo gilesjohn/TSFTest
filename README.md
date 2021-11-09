@@ -13,7 +13,7 @@ Install webpack in your project directory:
 
     npm install --save-dev webpack webpack-cli typescript ts-loader
     
-NPM PACKAGE NOT YET PUBLISHED. Install the typescript functions also in your project directory:
+Install the typescript functions also in your project directory:
 
     npm install --save-dev tsftest
 
@@ -24,7 +24,14 @@ Use pip to install the tsftest command (where `path_to_dir` is the folder contai
 
     pip install path_to_dir --user
 
+Create a test folder in your project if you don't have one already.
 
+Either:
+
+- Add `tsconfig.json` and `webpack.config.js` files to the test folder with settings to compile to `test_dir/dist/test.js`.
+
+OR
+- See the setup command in the Usage section for a simple command to add these files with a default configuration.
 
 ## Usage
 
@@ -36,7 +43,7 @@ To add default required configuration files if the files don't exist, run:
 
     tsftest setup path_to_test_folder
 
-To run the tests use:
+To run the tests use (consider setting this in your package.json->scripts.test):
  
     tsftest path_to_test_folder
     

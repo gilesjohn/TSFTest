@@ -5,6 +5,7 @@ import sys
 from tempfile import NamedTemporaryFile
 from typing import List, Union, Optional
 
+import pkg_resources
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.chrome.options import Options
@@ -59,7 +60,7 @@ def main():
         js_file_path = path.join(test_path, "dist/test.js")
 
         script_tag = f'<script>var headless = true;</script><script src="file://{js_file_path}"></script>'
-        with open('tsftest.html') as f:
+        with open(pkg_resources.resource_filename('tsftest', 'tsftest.html')) as f:
             html_content = f.read()
             html_content = html_content.replace('<!load script here!>', script_tag)
             with NamedTemporaryFile(delete=False, suffix=".html") as temp_file:
