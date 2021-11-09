@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Testing</title>
+        <style>
+            body {
+                background: #111;
+                color: #ccc;
+                font-family: monospace;
+                text-align: center;
+            }
+            assert, describe, success, fail, result, expected {
+                display: block
+            }
+            assert {
+                margin-bottom: 20px;
+            }
+            result:before {
+                content: "Result: "
+            }
+            result {
+                color: #bbb
+            }
+            expected:before {
+                content: "Expected: "
+            }
+            expected {
+                color: #888;
+            }
+            success {
+                color: #0f8;
+            }
+            fail {
+                color: #f22;
+            }
+            describe {
+                font-size: 22px;
+                margin: 10px 0 5px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="noTests">No tests</h1>
+
+        <!load script here!>
+    </body>
+</html>
