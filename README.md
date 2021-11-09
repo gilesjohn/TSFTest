@@ -2,9 +2,6 @@
 
 Simple frontend TypeScript testing utility
 
-STILL UNDER DEVELOPMENT. The following instructions are placeholders and may or may not work.
-Do not run commands you don't understand.
-
 I intend to rewrite or at least wrap the python in node.js to simplify installation.
 
 ## Installation
@@ -64,7 +61,7 @@ test("ApiRequest class",
 
 test("Api class",
     async (t: Test) => {
-        let api = new Api(new URL("https://sphere.type1.fun"), new ApiCredentials())
+        let api = new Api(new URL("http://127.0.0.1"), new ApiCredentials())
         let request = new ApiRequest("GET", "/");
 
         let response = await api.call(request)

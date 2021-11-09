@@ -14,7 +14,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 
 name = 'tsftest'
-cmd = 'tsftest'
+cmd = 'python -m tsftest'
 cmd_help = f'''{name} - TypeScript frontend testing utility
     Usage:
         {cmd} help - Show helpful information
