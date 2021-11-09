@@ -1,4 +1,4 @@
-# TsTest
+# TSFTest
 
 Simple frontend TypeScript testing utility.
 
