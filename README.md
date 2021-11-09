@@ -35,21 +35,17 @@ OR
 
 ## Usage
 
-`tsftest` may not be recognised as a command, if so replace with:
-
-    python -m tsftest
-
 To add default required configuration files if the files don't exist, run:
 
-    tsftest setup path_to_test_folder
+    python -m tsftest setup path_to_test_folder
 
 To run the tests use (consider setting this in your package.json->scripts.test):
  
-    tsftest path_to_test_folder
+    python -m tsftest path_to_test_folder
     
 You can make a browser window open with the tests allowing the use of browser developer tools with:
 
-    tsftest --headed path_to_test_folder
+    python -m tsftest --headed path_to_test_folder
 
 ## Example Test
 
