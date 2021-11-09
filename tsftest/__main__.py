@@ -13,8 +13,6 @@ from selenium.webdriver.chrome.options import Options
 
 from selenium.webdriver.support.wait import WebDriverWait
 
-# Todo: setup command which tsconfig.json and webpack config to folder
-
 name = 'tsftest'
 cmd = 'tsftest'
 cmd_help = f'''{name} - TypeScript frontend testing utility
