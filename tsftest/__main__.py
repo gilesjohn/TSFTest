@@ -51,7 +51,7 @@ def main():
         if not path.isdir(test_path):
             return f'Invalid path {sys.argv[1]}'
 
-        p = subprocess.Popen('webpack', cwd=test_path, shell=True)
+        p = subprocess.Popen(['npx', 'webpack'], cwd=test_path, shell=True)
         p.wait()
         if p.returncode != 0:
             return f'Webpack failed with exit code: {p.returncode}'

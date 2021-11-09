@@ -1,11 +1,14 @@
 {
   "name": "tsftest",
   "version": "1.0.0",
-  "description": "Simple frontent TypeScript testing",
+  "description": "Simple frontend TypeScript testing",
   "main": "tsftest.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "BGEH",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gilesjohn/TSFTest.git"
+  },
+  "homepage": "https://github.com/gilesjohn/TSFTest",
+  "bugs": "https://github.com/gilesjohn/TSFTest/issues"
 }
