@@ -2,6 +2,7 @@
 from os import path
 import subprocess
 import sys
+from shutil import copyfile
 from tempfile import NamedTemporaryFile
 from typing import List, Union, Optional
 
@@ -13,7 +14,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.wait import WebDriverWait
 
 # Todo: setup command which tsconfig.json and webpack config to folder
-# Todo: publish node package: https://docs.npmjs.com/creating-node-js-modules
 
 name = 'tsftest'
 cmd = 'tsftest'
@@ -44,7 +44,25 @@ def main():
     elif args[0] == 'help':
         print(cmd_help)
     elif args[0] == 'setup':
-        return "Not implemented"
+        if path.isfile('webpack.config.js'):
+            print('webpack.config.js already exists')
+        else:
+            entry_file = path.join('./', input('Entry filename: '))
+            if path.isfile(entry_file):
+                with open(pkg_resources.resource_filename('tsftest', 'webpack.config.js')) as f:
+                    webpack_config = f.read().replace('**ENTER ENTRY FILENAME**', entry_file)
+                    with open('webpack.config.js', 'w') as new_file:
+                        new_file.write(webpack_config)
+                        print('Created webpack.config.js')
+            else:
+                return f'Invalid file {entry_file}'
+        if path.isfile('tsconfig.json'):
+            print('tsconfig.json already exists')
+        else:
+            copyfile(pkg_resources.resource_filename('tsftest', 'tsconfig.json'), 'tsconfig.json')
+            print('Created tsconfig.json')
+        print('Finished setup')
+
     else:
         headless = '--headed' not in options
 

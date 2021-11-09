@@ -11,6 +11,6 @@ setup(name='tsftest',
               'tsftest = tsftest.__main__:main',
           ],
       },
-      package_data={'': ['tsftest.html']},
+      package_data={'': ['tsftest.html', 'tsconfig.json', 'webpack.config.js']},
       include_package_data=True, install_requires=['selenium']
       )
