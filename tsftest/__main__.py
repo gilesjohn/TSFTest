@@ -3,7 +3,6 @@ from os import path
 import subprocess
 import sys
 from tempfile import NamedTemporaryFile
-from time import sleep
 from typing import List, Union, Optional
 
 from selenium import webdriver
@@ -15,8 +14,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 # Todo: setup command which tsconfig.json and webpack config to folder
 # Todo: publish node package: https://docs.npmjs.com/creating-node-js-modules
 
-name = 'tstest'
-cmd = 'tstest'
+name = 'tsftest'
+cmd = 'tsftest'
 cmd_help = f'''{name} - TypeScript frontend testing utility
     Usage:
         {cmd} help - Show helpful information
@@ -60,7 +59,7 @@ def main():
         js_file_path = path.join(test_path, "dist/test.js")
 
         script_tag = f'<script>var headless = true;</script><script src="file://{js_file_path}"></script>'
-        with open('tstest.html') as f:
+        with open('tsftest.html') as f:
             html_content = f.read()
             html_content = html_content.replace('<!load script here!>', script_tag)
             with NamedTemporaryFile(delete=False, suffix=".html") as temp_file:

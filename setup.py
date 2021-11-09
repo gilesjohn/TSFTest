@@ -2,15 +2,15 @@
 
 from setuptools import setup
 
-setup(name='tstest',
+setup(name='tsftest',
       version='0.1.0',
-      packages=['tstest'],
+      packages=['tsftest'],
       description='TypeScript frontend testing',
       entry_points={
           'console_scripts': [
-              'tstest = tstest.__main__:main',
+              'tsftest = tsftest.__main__:main',
           ],
       },
-      package_data={'': ['tstest.html']},
+      package_data={'': ['tsftest.html']},
       include_package_data=True, install_requires=['selenium']
       )

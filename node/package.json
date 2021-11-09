@@ -1,11 +1,11 @@
 {
-  "name": "tstest",
+  "name": "tsftest",
   "version": "1.0.0",
   "description": "Simple frontent TypeScript testing",
-  "main": "tstest.ts",
+  "main": "tsftest.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "BGEH",
   "license": "ISC"
 }
